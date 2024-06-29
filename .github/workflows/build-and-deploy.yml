@@ -75,6 +75,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./frontend/build
 
+
       - name: Set up Kubectl
         uses: azure/setup-kubectl@v1
         with:
