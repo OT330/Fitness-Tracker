@@ -27,7 +27,7 @@ public class FitnessController {
     @Value("${jwt.secret}")
     private String secretKey;
 
-    @Autowired
+
     public FitnessController(FitnessService fitnessService) {
         this.fitnessService = fitnessService;
     }
@@ -59,10 +59,9 @@ public class FitnessController {
     }
 
     @GetMapping("/progress")
-    public ResponseEntity<List<Progress>> getProgress(@RequestHeader("Authorization") String token) {
-        Long userId = getUserIdFromToken(token);
-        logger.info("Fetching progress for user id: {}", userId);
-        List<Progress> progressList = fitnessService.getProgressByUserId(userId);
+    public ResponseEntity<List<Progress>> getProgress() {
+
+        List<Progress> progressList = fitnessService.getAllProgress();
         return ResponseEntity.ok(progressList);
     }
 

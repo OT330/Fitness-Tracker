@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
     private final BCryptPasswordEncoder passwordEncoder;
     private final String secretKey;
 
-    @Autowired
+
     public UserServiceImpl(UserRepository userRepository, BCryptPasswordEncoder passwordEncoder, @Value("${jwt.secret}") String secretKey) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;

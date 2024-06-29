@@ -12,4 +12,5 @@ public interface FitnessService {
     List<Workout> getAllWorkouts();
     Progress createProgress(Progress progress);
     List<Progress> getProgressByUserId(Long userId);
+    List<Progress> getAllProgress();
 }

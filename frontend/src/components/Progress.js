@@ -13,8 +13,8 @@ const Progress = ({ token }) => {
   useEffect(() => {
     const fetchProgress = async () => {
       try {
-        const response = await axios.get('http://localhost:8081/fitness/progress', {
-          headers: { Authorization: `Bearer ${token}` },
+        const response = await axios.get(`${process.env.REACT_APP_FITNESS_API}/fitness/progress`, {
+                  headers: { Authorization: `Bearer ${token}` },
         });
         setProgress(response.data);
       } catch (error) {

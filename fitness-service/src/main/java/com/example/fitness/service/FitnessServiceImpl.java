@@ -14,7 +14,7 @@ public class FitnessServiceImpl implements FitnessService {
     private final WorkoutRepository workoutRepository;
     private final ProgressRepository progressRepository;
 
-    @Autowired
+
     public FitnessServiceImpl(WorkoutRepository workoutRepository, ProgressRepository progressRepository) {
         this.workoutRepository = workoutRepository;
         this.progressRepository = progressRepository;
@@ -49,5 +49,10 @@ public class FitnessServiceImpl implements FitnessService {
     @Override
     public List<Progress> getProgressByUserId(Long userId) {
         return progressRepository.findByUserId(userId);
+    }
+
+    @Override
+    public List<Progress> getAllProgress() {
+        return progressRepository.findAll();
     }
 }
