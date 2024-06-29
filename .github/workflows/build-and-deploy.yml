@@ -25,6 +25,7 @@ jobs:
           mvn -B clean install
           mvn test
 
+
       - name: Verify Auth Service JAR exists
         run: |
           ls -la auth-service/target
