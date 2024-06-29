@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth-service
-          image: your-dockerhub-username/auth-service
+          image: oussamataoussi/auth-service
           ports:
             - containerPort: 8080
 
